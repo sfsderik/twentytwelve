@@ -1,0 +1,14 @@
+.custom-font-enabled {
+	.main {
+		& > .page {
+			@include container-fixed(0);
+
+			.page-thumbnail {
+				@include make-sm-column(6, 0);
+			}
+			.page-content {
+				@include make-sm-column(6, 0);
+			}
+		}
+	}
+}
