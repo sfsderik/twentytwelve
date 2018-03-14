@@ -1,0 +1,80 @@
+@import 'mixins/utilities';
+
+// Fonts
+$icon-font-path:       "~bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path:         "~font-awesome/fonts/";
+
+$brand-primary:   #334667;
+$brand-secondary: #e0a851;
+$headings-color:  #333333;
+$link-color:      $brand-secondary;
+$body-bg:         #fafafa;
+
+$navbar-default-color:             #fff;
+$navbar-default-bg:                #fff;
+$navbar-default-border:            $brand-secondary;
+
+// Navbar links
+$navbar-default-link-color:                $brand-primary;
+$navbar-default-link-hover-color:          #333;
+$navbar-default-link-hover-bg:             #f5f5f5;
+$navbar-default-link-active-color:         $brand-secondary;
+$navbar-default-link-active-bg:            #fff;
+$navbar-default-link-disabled-color:       #ccc;
+$navbar-default-link-disabled-bg:          transparent;
+
+// Navbar toggle
+$navbar-default-toggle-bg:                 #fff;
+$navbar-default-toggle-hover-bg:           #ddd;
+$navbar-default-toggle-icon-bar-bg:        $brand-primary;
+$navbar-default-toggle-border-color:       #ddd;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       Montserrat, "Times New Roman", Times, serif;
+$font-family-base:        $font-family-sans-serif;
+
+$font-size-base:          16px;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    Nunito, "Times New Roman", Times, serif;
+$headings-font-weight:    700;
+$headings-line-height:    1.1;
+
+// Breakpoints
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+$grid-float-breakpoint: $screen-md-min;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);

@@ -1,0 +1,23 @@
+{
+    "name": "twentytwelve/spotzer",
+    "description": "Spotzer exam twentytwelve WordPress theme.",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "Derik Seno",
+            "email": "vonnderik@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "composer/installers": "~1.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "Spotzer\\Twentytwelve\\": "lib/includes/"
+      },
+      "files": [
+        "lib/includes/helpers.php"
+      ]
+    }
+}

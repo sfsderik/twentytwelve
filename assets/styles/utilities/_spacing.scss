@@ -1,0 +1,42 @@
+// Margin and Padding
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @for $size from 0 through 50 {
+    .#{$abbrev}-#{$size} { #{$prop}: #{$size}px !important; }
+    .#{$abbrev}-t-#{$size},
+    .#{$abbrev}-y-#{$size} {
+      #{$prop}-top: #{$size}px !important;
+    }
+    .#{$abbrev}-r-#{$size},
+    .#{$abbrev}-x-#{$size} {
+      #{$prop}-right: #{$size}px !important;
+    }
+    .#{$abbrev}-b-#{$size},
+    .#{$abbrev}-y-#{$size} {
+      #{$prop}-bottom: #{$size}px !important;
+    }
+    .#{$abbrev}-l-#{$size},
+    .#{$abbrev}-x-#{$size} {
+      #{$prop}-left: #{$size}px !important;
+    }
+  }
+}
+
+// Some special margin utils
+.m-auto { margin: auto !important; }
+.m-t-auto,
+.m-y-auto {
+  margin-top: auto !important;
+}
+.m-r-auto,
+.m-x-auto {
+  margin-right: auto !important;
+}
+.m-b-auto,
+.m-y-auto {
+  margin-bottom: auto !important;
+}
+.m-l-auto,
+.m-x-auto {
+  margin-left: auto !important;
+}
