@@ -315,6 +315,26 @@ function twentytwelve_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+
+	register_sidebar( array(
+		'name' => __( 'Navbar Call To Action Widget', 'twentytwelve' ),
+		'id' => 'navbar-widget',
+		'description' => __( 'Widget Area for Call To Action button widget.', 'twentytwelve' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s navbar-cta navbar-right text-center">',
+		'after_widget' => '</div>',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Footer Widget Area', 'twentytwelve' ),
+		'id' => 'footer-widget',
+		'description' => __( 'Appears at the footer area.', 'twentytwelve' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s col-sm-6 col-sm-push-6">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'twentytwelve_widgets_init' );
 

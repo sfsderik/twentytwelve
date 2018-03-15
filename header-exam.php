@@ -41,6 +41,9 @@
                          <?php endif; ?>
                       </a>
                     </div>
+                    <?php if ( is_active_sidebar( 'navbar-widget' ) ) : ?>
+                      <?php dynamic_sidebar( 'navbar-widget' ); ?>
+                    <?php endif; ?>
                     <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
                         <?php if ( has_nav_menu('primary') ) : ?>
                             <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav navbar-nav', 'container' => false ) ); ?>

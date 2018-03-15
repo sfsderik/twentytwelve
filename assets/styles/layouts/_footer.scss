@@ -1,0 +1,19 @@
+.site-footer {
+	background-color: $brand-primary;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: #fff;
+	font-size: 12px;
+	
+	.footer-brand {
+		margin-bottom: 15px;
+		img.footer-image {
+			max-height: 72px;
+			width: auto;
+		}
+	}
+	
+	a {
+		color: #fff;
+	}
+}

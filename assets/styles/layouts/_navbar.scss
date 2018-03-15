@@ -1,0 +1,46 @@
+.navbar-toggle {
+	border: 0;
+	padding: 0;
+	margin-top: 12px;
+	.icon-bar {
+		width: 35px;
+		height: 5px;
+		border-radius: 2px;
+	}
+}
+
+.navbar-default {
+	.navbar-toggle {
+		min-height: 30px;
+		
+		&:focus,
+		&:hover, {
+			background-color: transparent;
+		}
+
+		.icon-bar {
+			transition: all .1s ease-in-out;
+			&:nth-child(2) {
+				transform: rotate(45deg);
+			}
+			&:nth-child(3) {
+				display: none;
+			}
+			&:last-child() {
+				transform: rotate(-45deg);
+				margin-top: -5px;
+			}
+		}
+
+		&.collapsed {
+			.icon-bar {
+				transform: none;
+				display: block;
+
+				& + .icon-bar {
+					margin-top: 6px;
+				}
+			}
+		}
+	}
+}

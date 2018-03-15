@@ -1,0 +1,38 @@
+.btn {
+	transition: all .3s ease-in-out;
+	border-radius: 50px;
+}
+
+.btn-cta {
+	margin: 15px;
+	background-color: #0070ba;
+	border-color: #0070ba;
+	color: #fff;
+	font-size: 18px;
+	min-width: 240px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: Nunito, sans-serif;
+
+	&:hover {
+		background-color: darken(#0070ba, 5%);
+		color: #fff;
+	}
+
+	&.cta-primary {
+		background-color: $brand-primary;
+		border-color: $brand-primary;
+
+		&:hover {
+			background-color: darken($brand-primary, 5%);
+		}
+	}
+	&.cta-secondary {
+		background-color: $brand-secondary;
+		border-color: $brand-secondary;
+
+		&:hover {
+			background-color: darken($brand-secondary, 5%);
+		}
+	}
+}

@@ -7,7 +7,21 @@ import 'bootstrap-sass';
     // All pages
     'common': {
       init: function() {
-        // code
+        $('.menu-item-has-children').mouseenter(function() {
+          if ($('[data-target="#navbar"]').is(':visible') === false) {
+            if ($(this).hasClass('open') !== true) {
+              $(this).addClass('open');
+              $(this).find('[data-toggle="dropdown"]').attr('aria-expanded', true);
+            }
+          }
+        }).mouseleave(function() {
+          if ($('[data-target="#navbar"]').is(':visible') === false) {
+            if ($(this).hasClass('open') === true) {
+              $(this).removeClass('open');
+              $(this).find('[data-toggle="dropdown"]').attr('aria-expanded', false);
+            }
+          }
+        });
       },
     },
     'home': {

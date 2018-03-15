@@ -1,13 +1,43 @@
-.custom-font-enabled {
+.page-template-front-page {
 	.main {
 		& > .page {
-			@include container-fixed(0);
-
-			.page-thumbnail {
-				@include make-sm-column(6, 0);
+			position: relative;
+			text-align: center;
+			&:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				opacity: 0.8;
+				background-color: #000;
+				z-index: 1;
 			}
-			.page-content {
-				@include make-sm-column(6, 0);
+			background-size: cover;
+			background-repeat: no-repeat;
+			.wp-post-image {
+				display: none;
+			}
+
+			.homepage {
+				@extend .container;
+				padding-top: 30px;
+				padding-bottom: 30px;
+				position: relative;
+				color: #fff;
+				font-size: 24px;
+				z-index: 2;
+
+				@include media-breakpoint-up(md) {
+					padding-top: 60px;
+					padding-bottom: 60px;
+				}
+
+				h1 {
+					color: $brand-secondary;
+					margin-bottom: 30px;
+				}
 			}
 		}
 	}

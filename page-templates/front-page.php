@@ -12,24 +12,12 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header(); ?>
-
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php if ( has_post_thumbnail() ) : ?>
-					<div class="entry-page-image">
-						<?php the_post_thumbnail(); ?>
-					</div><!-- .entry-page-image -->
-				<?php endif; ?>
-
-				<?php get_template_part( 'content', 'page' ); ?>
-
-			<?php endwhile; // end of the loop. ?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
-<?php get_sidebar( 'front' ); ?>
-<?php get_footer(); ?>
+ get_header('exam'); ?>
+    <div class="content">
+ 	   <main class="main">
+ 		   <?php while(have_posts()) : the_post(); ?>
+ 			   <?php get_template_part('content', 'home'); ?>
+ 		   <?php endwhile; ?>
+ 	   </main><!-- /.main -->
+    </div><!-- /.content -->
+ <?php get_footer('exam'); ?>
