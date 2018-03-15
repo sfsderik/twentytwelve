@@ -4,6 +4,13 @@
 	padding-bottom: 30px;
 	color: #fff;
 	font-size: 12px;
+
+	.site-info {
+		@include media-breakpoint-down(sm) {
+			margin-top: 30px;
+			text-align: center;
+		}
+	}
 	
 	.footer-brand {
 		margin-bottom: 15px;
