@@ -41,4 +41,13 @@
 			}
 		}
 	}
+
+	.section {
+		text-align: center;
+
+		h2 {
+			@extend .h1;
+			color: $brand-secondary;
+		}
+	}
 }
