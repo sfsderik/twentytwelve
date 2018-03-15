@@ -4,7 +4,7 @@
     				<?php if ( is_active_sidebar( 'footer-widget' ) ) : ?>
                       <?php dynamic_sidebar( 'footer-widget' ); ?>
                     <?php endif; ?>
-    				<div class="site-info col-sm-4 col-sm-pull-6">
+    				<div class="site-info col-sm-6 <?php echo is_active_sidebar( 'footer-widget' ) ? 'col-sm-pull-6' : ''; ?>">
     					<div class="footer-brand">
     						<?php if ( get_header_image() ) : ?>
 	                        	<img src="<?php header_image(); ?>" class="footer-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />

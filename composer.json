@@ -14,7 +14,8 @@
     },
     "autoload": {
       "psr-4": {
-        "Spotzer\\Twentytwelve\\": "lib/includes/"
+        "Spotzer\\Twentytwelve\\": "lib/includes/",
+        "Spotzer\\Twentytwelve\\Admin\\": "lib/admin/"
       },
       "files": [
         "lib/includes/helpers.php"

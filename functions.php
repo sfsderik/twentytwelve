@@ -136,7 +136,7 @@ function twentytwelve_get_font_url() {
 			$subsets .= ',vietnamese';
 
 		$query_args = array(
-			'family' => 'Nunito:700',
+			'family' => 'Nunito:300,600,700',
 			'subset' => $subsets,
 		);
 		$font_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
@@ -330,7 +330,7 @@ function twentytwelve_widgets_init() {
 		'name' => __( 'Footer Widget Area', 'twentytwelve' ),
 		'id' => 'footer-widget',
 		'description' => __( 'Appears at the footer area.', 'twentytwelve' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s col-sm-6 col-sm-push-6">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s footer-widget col-sm-6 col-sm-push-6">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',

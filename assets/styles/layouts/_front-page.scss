@@ -48,6 +48,45 @@
 		h2 {
 			@extend .h1;
 			color: $brand-secondary;
+			font-weight: 300;
+			margin-bottom: 30px;
+		}
+
+		.info-blocks {
+			@include make-row();
+			margin-top: 60px;
+			h3 {
+				color: $brand-secondary;
+				font-weight: 600;
+			}
+
+			&.info-blocks-3 {
+				.info-block {
+					@include make-sm-column(4);
+				}
+			}
+			&.info-blocks-2 {
+				.info-block {
+					@include make-sm-column(6);
+				}
+			}
+			&.info-blocks-1 {
+				.info-block {
+					@include make-sm-column(12);
+				}
+			}
+
+			.info-block-thumbnail {
+				img {
+					max-width: 128px;
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.info-block-content {
+
+			}
 		}
 	}
 }

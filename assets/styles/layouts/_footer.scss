@@ -5,6 +5,16 @@
 	color: #fff;
 	font-size: 12px;
 
+	.footer-widget {
+		h3 {
+			text-transform: uppercase;
+			color: $brand-secondary;
+			font-size: 24px;
+			margin-top: 0;
+			font-we: 600;
+		}
+	}
+
 	.site-info {
 		@include media-breakpoint-down(sm) {
 			margin-top: 30px;
