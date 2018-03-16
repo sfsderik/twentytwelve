@@ -1,6 +1,10 @@
 .btn {
 	transition: all .3s ease-in-out;
 	border-radius: 50px;
+
+	&:focus {
+		outline: 0;
+	}
 }
 
 .btn-cta {
@@ -14,7 +18,8 @@
 	padding-bottom: 15px;
 	font-family: Nunito, sans-serif;
 
-	&:hover {
+	&:hover,
+	&:focus, {
 		background-color: darken(#0070ba, 5%);
 		color: #fff;
 	}

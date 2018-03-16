@@ -8,7 +8,9 @@ $brand-primary:   #334667;
 $brand-secondary: #e0a851;
 $headings-color:  #333333;
 $link-color:      $brand-secondary;
-$body-bg:         #fafafa;
+$body-bg:         #ffffff;
+$gray-base:       #000 !default;
+$gray:            lighten($gray-base, 33.5%) !default; // #555
 
 $navbar-default-color:             #fff;
 $navbar-default-bg:                #fff;
@@ -57,6 +59,46 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 $headings-font-family:    Nunito, "Times New Roman", Times, serif;
 $headings-font-weight:    700;
 $headings-line-height:    1.1;
+
+
+//== Forms
+//
+//##
+
+//** `<input>` background color
+$input-bg:                       #fff !default;
+
+//** Text color for `<input>`s
+$input-color:                    $gray !default;
+//** `<input>` border color
+$input-border:                   $brand-primary !default;
+
+// TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
+//** Default `.form-control` border radius
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+$input-border-radius:            0 !default;
+//** Large `.form-control` border radius
+$input-border-radius-large:      0 !default;
+//** Small `.form-control` border radius
+$input-border-radius-small:      0 !default;
+
+//** Border color for inputs on focus
+$input-border-focus:             $brand-primary !default;
+
+//** Placeholder text color
+$input-color-placeholder:        #999 !default;
+
+//** `.form-group` margin
+$form-group-margin-bottom:       15px !default;
+
+//** Background color for textual input addons
+$input-group-addon-bg:           $brand-primary !default;
+//** Border color for textual input addons
+$input-group-addon-border-color: $brand-primary !default;
+
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed !default;
+
 
 // Breakpoints
 

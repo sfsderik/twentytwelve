@@ -17,6 +17,7 @@ class Theme {
     private function register_shortcodes()
     {
         new \Spotzer\Twentytwelve\CallToAction;
+        new \Spotzer\Twentytwelve\MortgageCalculator;
     }
 
     private function nav_menu_filters()

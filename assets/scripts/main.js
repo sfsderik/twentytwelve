@@ -1,6 +1,7 @@
 /** import external dependencies */
 import 'jquery';
 import 'bootstrap-sass';
+const Chartist = require('chartist');
 
 (function($) {
   var TWENTYTWELVE = {
@@ -27,6 +28,36 @@ import 'bootstrap-sass';
     'home': {
       init: function() {
         // code
+      },
+    },
+    'page_template_calculator': {
+      init: function() {
+        $('.btn-calculator').click(function(event) {
+          event.preventDefault();
+          $.get(rest_url + 'calculate.json', $('.mortgage-calculator').serializeArray(), function(data) {
+            var options = {
+              axisX: {
+                type: Chartist.AutoScaleAxis,
+                onlyInteger: true,
+              },
+              showPoint: false,
+              height: '100%',
+              showArea: true,
+              low: 0,
+              high: data.capital,
+              fullWidth: true,
+            };
+            new Chartist.Line('.mortgage-calculator-chart', data, options);
+            $('.mortgage-total').text(data.total);
+            $('.mortgage-capital').text(data.capital);
+            $('.mortgage-monthly').text(data.monthly);
+            $('.mortgage-interest').text(data.interest);
+            if ($('#mortgage-result').is(':visible') === false) {
+              $('#mortgage-result').fadeIn();
+            }
+            $('html, body').animate({scrollTop: $('#mortgage-result').offset().top}, 'slow');
+          });
+        });
       },
     },
   };

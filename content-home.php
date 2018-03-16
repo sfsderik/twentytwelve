@@ -4,11 +4,14 @@
         <?php the_content(); ?>
     </div><!-- .entry-content -->
 </div><!-- #post -->
-<section class="section">
+<?php $frontpage = get_post_meta($post->ID, '_front_page_section', true); ?>
+<?php if ($frontpage) : ?>
+	<section class="section front-page-section">
 	<div class="container">
-		<h2>Pellentesque adipiscing commodo.</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum varius sit. Orci phasellus egestas tellus rutrum.</p>
-		<div class="info-blocks info-blocks-3">
+		<?php echo apply_filters('the_content', $frontpage['content']); ?>
+		<?php foreach($frontpage['infoboxes'] as $key => $boxes) : ?>
+		<?php endforeach; ?>
+		<div class="info-blocks info-blocks-<?php echo $frontpage['columns']; ?>">
 			<div class="info-block">
 				<div class="info-block-thumbnail">
 					<img src="<?php echo asset_path('images/mortgage.png'); ?>" />
@@ -39,3 +42,4 @@
 		</div>
 	</div>
 </section>
+<?php endif; ?>

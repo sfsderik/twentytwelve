@@ -60,6 +60,10 @@
 				font-weight: 600;
 			}
 
+			.info-block {
+				margin-bottom: 30px;
+			}
+
 			&.info-blocks-3 {
 				.info-block {
 					@include make-sm-column(4);

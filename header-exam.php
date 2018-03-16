@@ -33,7 +33,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand" href="<?php esc_url( home_url('/') ); ?>">
+                      <a class="navbar-brand" href="<?php echo esc_url( home_url('/') ); ?>">
                           <?php if ( get_header_image() ) : ?>
                           <img src="<?php header_image(); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
                          <?php else : ?>

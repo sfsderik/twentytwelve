@@ -14,7 +14,8 @@
     "extends": "eslint:recommended",
     "globals": {
       "wp": true,
-      "google": true
+      "google": true,
+      "rest_url": true
     },
     "env": {
       "node": true,
@@ -107,6 +108,7 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
+    "chartist": "^0.11.0",
     "font-awesome": "4.3.0"
   }
 }
